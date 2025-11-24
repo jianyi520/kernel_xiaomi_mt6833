@@ -3,7 +3,7 @@ obj-y += sspm_logger_impl.o
 
 ccflags-y += -I$(srctree)/drivers/misc/mediatek/include
 ccflags-y += -I$(srctree)/drivers/misc/mediatek/sspm
-
+ccflags-y += -I$(srctree)/drivers/misc/mediatek/sspm/v2/
 ifeq ($(CONFIG_MACH_MT6781),y)
 ccflags-y += -I$(srctree)/drivers/misc/mediatek/sspm/mt6781
 else

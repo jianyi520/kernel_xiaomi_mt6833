@@ -7,3 +7,5 @@ ccflags-y += -I$(srctree)/drivers/misc/mediatek/timer/timesync
 
 # sched for cpu prefer
 ccflags-y += -I$(srctree)/drivers/misc/mediatek/sched/
+
+ccflags-y += -I$(srctree)/drivers/misc/mediatek/tee_sanity/
