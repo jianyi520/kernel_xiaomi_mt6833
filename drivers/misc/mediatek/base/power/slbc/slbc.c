@@ -24,7 +24,7 @@
 
 #include <trace/events/mtk_events.h>
 
-#include <slbc.h>
+#include "slbc.h"
 #define CREATE_TRACE_POINTS
 #include <slbc_events.h>
 

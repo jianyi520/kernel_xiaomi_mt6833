@@ -325,9 +325,11 @@ static void sia8152_check_trimming(
 	struct regmap *regmap)
 {
 	int i = 0;
-	const uint32_t reg_num = ARRAY_SIZE(trimming_regs);
-	uint8_t vals[reg_num] = {0};
 	uint8_t crc = 0;
+	const uint32_t reg_num = ARRAY_SIZE(trimming_regs);
+	uint8_t vals[reg_num];
+	memset(vals, 0, sizeof(vals));
+	
 
 	if (0 == sia8152s_check_chip_id(regmap))
 		sia8152s_check_trimming(regmap);

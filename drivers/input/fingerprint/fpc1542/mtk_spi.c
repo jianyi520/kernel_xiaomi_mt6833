@@ -168,8 +168,11 @@ static int fpc_read_id(struct spi_device *spidev)
      int status;
      const int len = 3;
      struct spi_message m;
-     u8 rx[len] = {0, 0, 0};
-     u8 tx[len] = {0xfc, 0, 0};
+     u8 rx[len];
+	 memset(rx, 0 , sizeof(rx));
+     u8 tx[len];
+	 memset(tx, 0, sizeof(tx));
+	 tx[0] = 0xfc;
 
      struct spi_transfer id = {
      .speed_hz = 1000000,

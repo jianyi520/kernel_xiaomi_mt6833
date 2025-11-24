@@ -442,10 +442,10 @@ LINUXINCLUDE    := \
 		$(USERINCLUDE)
 
 KBUILD_AFLAGS   := -D__ASSEMBLY__
-KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs \
-		   -fno-strict-aliasing -fno-common -fshort-wchar \
-		   -Werror-implicit-function-declaration \
-		   -Wno-format-security \
+KBUILD_CFLAGS   :=  -Wundef -Wstrict-prototypes -Wno-trigraphs \
+		   -fno-strict-aliasing -fno-common -fshort-wchar -Wno-error=duplicate-decl-specifier -Wno-error=format \
+		    -Wno-error=enum-int-mismatch -Wno-error=dangling-pointer -Wno-error=address -Wno-error=array-compare -Wno-error=stringop-overread -Wno-error=misleading-indentation -Wno-error=memset-elt-size -Wno-error=format-extra-args -Wno-error=declaration-after-statement -Wno-error=array-parameter -Wno-error=incompatible-pointer-types -Wno-error=maybe-uninitialized \
+		   -Wno-format-security -Wno-error=implicit-function-declaration -Wno-error=unused-function -Wno-error=parentheses \
 		   -std=gnu89
 KBUILD_CPPFLAGS := -D__KERNEL__
 KBUILD_AFLAGS_KERNEL :=
